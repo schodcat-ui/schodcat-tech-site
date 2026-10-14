@@ -270,7 +270,9 @@ img{ max-width:100%; display:block; }
 .modal-body p{ font-size:.92rem; }
 .modal-wide{ max-width: 880px; }
 .modal-body h4{ font-size:.92rem; color: var(--accent-2); margin: 20px 0 8px; letter-spacing:.02em; }
-.modal-body ul{ margin: 0 0 1em; padding-left: 20px; display:grid; gap:8px; }
+.modal-body ul, .modal-body ol{ margin: 0 0 1em; padding-left: 22px; display:grid; gap:8px; }
+.modal-body ol li::marker{ color: var(--accent-2); font-weight:700; }
+.app-buttons{ display:flex; gap:10px; flex-wrap:wrap; }
 .modal-body li{ font-size:.92rem; color: var(--muted); }
 .modal-body strong{ color: var(--ink); font-weight:600; }
 .modal-body code{

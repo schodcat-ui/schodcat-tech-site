@@ -194,7 +194,10 @@
 
           <div class="app-actions">
             <span class="badge-soft">Available on Android</span>
-            <button class="btn btn-ghost btn-small" data-open-modal="privacy-vapogo">Privacy Policy</button>
+            <div class="app-buttons">
+              <button class="btn btn-ghost btn-small" data-open-modal="privacy-vapogo">Privacy Policy</button>
+              <button class="btn btn-ghost btn-small" data-open-modal="delete-account-vapogo">Delete account</button>
+            </div>
           </div>
         </article>
 
@@ -423,7 +426,7 @@
       <h3>6. Your choices and rights</h3>
       <ul>
         <li>See and correct your details in the app (Account in the customer app, My Profile in the Partner app).</li>
-        <li>Delete your account and data inside the app, or ask us to do it by emailing <a href="mailto:support@schodcattech.com" class="link-underline">support@schodcattech.com</a>.</li>
+        <li>Delete your account and data inside the app, or ask us to do it: <a href="#delete-account-vapogo" class="link-underline">see how to delete your account</a>.</li>
         <li><strong>Location:</strong> you can refuse or withdraw the location permission in your phone's settings. The apps still work; you type the pickup address instead.</li>
         <li><strong>Notifications:</strong> you can switch them off in your phone's settings.</li>
         <li><strong>Ads:</strong> you can reset or delete your advertising ID or opt out of ad personalisation in your phone's Google settings.</li>
@@ -457,6 +460,50 @@
         Schodcat Tech, VAPOGO support:
         <a href="mailto:support@schodcattech.com" class="link-underline">support@schodcattech.com</a>
       </p>
+    </div>
+  </div>
+</div>
+
+<!-- VAPOGO DELETE ACCOUNT MODAL -->
+<div class="modal-backdrop" id="delete-account-vapogo" aria-hidden="true">
+  <div class="modal-panel glass-panel" role="dialog" aria-modal="true" aria-labelledby="vapogoDeleteTitle">
+    <button class="modal-close" data-close-modal aria-label="Close">✕</button>
+    <h2 id="vapogoDeleteTitle">Delete your VAPOGO account</h2>
+    <p class="modal-meta">Applies to the apps VAPOGO (customers) and VAPOGO Partner (bus operators), both from Schodcat Tech.</p>
+
+    <div class="modal-body">
+      <h3>Delete it inside the app (fastest)</h3>
+      <ol>
+        <li>Open the app and log in.</li>
+        <li>
+          <strong>Customer app:</strong> go to the Account tab and tap <strong>Delete account</strong>.<br>
+          <strong>Partner app:</strong> open the side menu and tap <strong>Delete account</strong>.
+        </li>
+        <li>Confirm. Your account and data are deleted straight away.</li>
+      </ol>
+
+      <h3>Cannot open the app? Ask us to delete it</h3>
+      <p>
+        Email <a href="mailto:support@schodcattech.com?subject=Delete%20my%20VAPOGO%20account" class="link-underline">support@schodcattech.com</a>
+        from the email address of the account, with the subject "Delete my VAPOGO account", and tell us the mobile
+        number on the account. We will delete the account within 30 days and confirm by email.
+      </p>
+
+      <h3>What is deleted</h3>
+      <ul>
+        <li><strong>Your profile:</strong> name, email address, mobile number, Google sign-in link and notification tokens.</li>
+        <li>Your trip requests, bookings, ratings and reviews.</li>
+        <li><strong>For operators:</strong> all your buses, bus photos, driver details and the bookings on those buses.</li>
+      </ul>
+
+      <h3>What we keep, and why</h3>
+      <ul>
+        <li>A record that you accepted our Terms &amp; Disclaimer (name, email, mobile number, version, time), as proof of what was agreed.</li>
+        <li>If your account was suspended, or a bus was taken down, after a report: the email, mobile number and bus registration number, so that the suspended account or bus cannot return under a new account.</li>
+        <li>Technical server logs for a limited time, for security.</li>
+      </ul>
+
+      <p><strong>Deleting your account cannot be undone.</strong> See our <a href="#privacy-vapogo" class="link-underline">Privacy Policy</a> for more.</p>
     </div>
   </div>
 </div>
