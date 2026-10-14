@@ -87,17 +87,35 @@
   var activeModal = null;
 
   function openModal(modal){
+    if(activeModal && activeModal !== modal) closeModal(activeModal, true);
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
+    modal.querySelector(".modal-panel").scrollTop = 0;
     activeModal = modal;
+    if(location.hash !== "#" + modal.id){
+      history.replaceState(null, "", "#" + modal.id);
+    }
   }
-  function closeModal(modal){
+  function closeModal(modal, keepHash){
     modal.classList.remove("open");
     modal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
     activeModal = null;
+    if(!keepHash && location.hash === "#" + modal.id){
+      history.replaceState(null, "", "#applications");
+    }
   }
+
+  function openModalFromHash(){
+    var id = location.hash.slice(1);
+    var modal = id ? document.getElementById(id) : null;
+    if(modal && modal.classList.contains("modal-backdrop")){
+      openModal(modal);
+    }
+  }
+  window.addEventListener("hashchange", openModalFromHash);
+  openModalFromHash();
 
   openButtons.forEach(function(btn){
     btn.addEventListener("click", function(){
